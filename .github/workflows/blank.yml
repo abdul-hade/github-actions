@@ -3,17 +3,21 @@ name: MY First Workflow
 on: push
 
 jobs:
-    first_job:
-        runs-on: ubuntu-latest
-        steps:
-        - name: ChckOut Repo
-          uses: actions/checkout@v4 
+  first_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: CheckOut Repo
+        uses: actions/checkout@v4 
 
-        - name: Welcome Message!
-          run: |
-            echo "My first GitHub Actions job"
-            ls -ltrh
-            cat README.md
+      - name: Welcome Message!
+        run: |
+          echo "My first GitHub Actions job"
+          ls -ltrh
+          cat README.md
 
-        - name: Welcome Message!
-          run: cowsay -f dragon "Run for cover, I am a DRAGON....RAWR" >> dragon.txt
+      - name: Install cowsay
+        run: sudo apt-get update && sudo apt-get install -y cowsay
+
+      - name: Generate ASCII 
+        run: cowsay -f dragon "Run for cover, I am a DRAGON....RAWR" >> dragon.txt
+
