@@ -9,7 +9,7 @@ jobs:
         - name: Welcome Message! 
           run: echo "My first giyhub ctions job"
 
-        - name : List file 
+        - name: List file 
           run: ls
 
         - name: Read files
