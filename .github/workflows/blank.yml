@@ -1,0 +1,16 @@
+name: MY First Workflow
+
+on: push
+
+jobs:
+     first_job:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Welcome Message! 
+          run: echo "My first giyhub ctions job"
+
+        - name : List file 
+          run: ls
+
+        - name: Read files
+          run: car README.md
